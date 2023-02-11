@@ -1,0 +1,31 @@
+plugins {
+    id 'application'
+    id 'org.springframework.boot' version '3.0.2'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'idea'
+}
+
+group 'com.example'
+version '0.0.1'
+sourceCompatibility = '17'
+
+application {
+    mainClass = 'com.example.ApiGatewayApplication'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation libs.spring.cloud.starter.gateway
+    implementation libs.spring.cloud.eureka.client
+    implementation libs.micrometer.tracing
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+apply from: '${rootProject}/../../.gradle/local.properties'

@@ -1,0 +1,26 @@
+plugins {
+    id 'application'
+    id 'org.springframework.boot' version '3.0.2'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'idea'
+}
+
+group 'com.example'
+version '0.0.1'
+sourceCompatibility = '17'
+
+application {
+    mainClass = 'com.example.DiscoveryServerApplication'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation libs.spring.cloud.eureka.server
+}
+
+test {
+    useJUnitPlatform()
+}

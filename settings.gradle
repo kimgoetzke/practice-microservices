@@ -1,0 +1,24 @@
+rootProject.name = 'Practice-Microservices'
+include 'api-gateway'
+include 'discovery-server'
+include 'customer-service'
+include 'product-service'
+include 'inventory-service'
+include 'order-service'
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            library('spring-cloud-dependencies', 'org.springframework.cloud:spring-cloud-dependencies:2022.0.1')
+            library('spring-cloud-eureka-client', 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:4.0.0')
+            library('spring-cloud-eureka-server', 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server:4.0.0')
+            library('spring-cloud-starter-gateway', 'org.springframework.cloud:spring-cloud-starter-gateway:4.0.1')
+            library('micrometer-tracing', 'io.micrometer:micrometer-tracing:1.0.1')
+            library('lombok', 'org.projectlombok:lombok:1.18.26')
+            library('testcontainers.postgres', 'org.testcontainers:postgresql:1.17.6')
+            library('testcontainers.junit', 'org.testcontainers:junit-jupiter:1.17.6')
+        }
+    }
+}
+
+
