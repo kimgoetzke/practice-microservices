@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,10 +22,10 @@ public class InventoryService {
 
         for (InventoryRequestDto requestDto : requestDtoList) {
             InventoryResponseDto responseDto = new InventoryResponseDto();
-            responseDto.setSkuCode(requestDto.getSkuCode());
-            if (inventoryRepository.findBySkuCode(requestDto.getSkuCode()).isPresent()) {
+            responseDto.setName(requestDto.getName());
+            if (inventoryRepository.findByName(requestDto.getName()).isPresent()) {
                 responseDto.setInStock(inventoryRepository
-                        .findBySkuCode(requestDto.getSkuCode()).get().getQuantity() > requestDto.getQuantity());
+                        .findByName(requestDto.getName()).get().getQuantity() > requestDto.getQuantity());
             } else {
                 responseDto.setInStock(false);
             }
@@ -44,7 +43,7 @@ public class InventoryService {
         if (allProductsInStock) {
             log.info("All items in stock. Inventory will be updated.");
             for (InventoryRequestDto responseDto : requestDtoList) {
-                Optional<Inventory> inventory = inventoryRepository.findBySkuCode(responseDto.getSkuCode());
+                Optional<Inventory> inventory = inventoryRepository.findByName(responseDto.getName());
                 if (inventory.isPresent()) {
                     inventory.get().setQuantity(inventory.get().getQuantity() - responseDto.getQuantity());
                     inventoryRepository.save(inventory.get());

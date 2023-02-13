@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class InventoryRequestDto {
-    private String skuCode;
+    private String name;
     private Integer quantity;
 }

@@ -21,6 +21,8 @@ dependencies {
     implementation libs.spring.cloud.starter.gateway
     implementation libs.spring.cloud.eureka.client
     implementation libs.micrometer.tracing
+    implementation libs.spring.boot.starter.oath2.resource.server
+    implementation libs.spring.boot.starter.security
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

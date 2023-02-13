@@ -17,19 +17,19 @@ public class InventoryServiceApplication {
     public CommandLineRunner createTestInitialInventory(InventoryRepository inventoryRepository) {
         return args -> {
             Inventory scooter = new Inventory();
-            scooter.setSkuCode("Scooter");
+            scooter.setName("Scooter");
             scooter.setQuantity(100);
 
             Inventory bicycle = new Inventory();
-            bicycle.setSkuCode("Bicycle");
+            bicycle.setName("Bicycle");
             bicycle.setQuantity(0);
 
             Inventory car1 = new Inventory();
-            car1.setSkuCode("Boring car");
+            car1.setName("Boring car");
             car1.setQuantity(9);
 
             Inventory car2 = new Inventory();
-            car2.setSkuCode("Fancy car");
+            car2.setName("Fancy car");
             car2.setQuantity(2);
 
             inventoryRepository.save(scooter);

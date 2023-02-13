@@ -16,7 +16,7 @@ public class OrderRequestLineItemsDto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String skuCode;
+    private String name;
     private BigDecimal price;
     private Integer quantity;
 }

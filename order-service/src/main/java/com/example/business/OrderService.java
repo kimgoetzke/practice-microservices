@@ -29,7 +29,7 @@ public class OrderService {
         List<InventoryRequestDto> requestList = new ArrayList<>();
         for (OrderRequestLineItemsDto lineItem : orderRequestDto.getOrderLineItemsDtoList()) {
             InventoryRequestDto inventoryRequestDto = InventoryRequestDto.builder()
-                    .skuCode(lineItem.getSkuCode())
+                    .name(lineItem.getName())
                     .quantity(lineItem.getQuantity())
                     .build();
             requestList.add(inventoryRequestDto);
@@ -77,10 +77,10 @@ public class OrderService {
     }
 
     private OrderLineItems mapDtoLineItemsToLineItems(OrderRequestLineItemsDto dtoLineItem) {
-        OrderLineItems orderLineItems = new OrderLineItems();
-        orderLineItems.setPrice(dtoLineItem.getPrice());
-        orderLineItems.setQuantity(dtoLineItem.getQuantity());
-        orderLineItems.setSkuCode(dtoLineItem.getSkuCode());
-        return orderLineItems;
+        return OrderLineItems.builder()
+                .name(dtoLineItem.getName())
+                .price(dtoLineItem.getPrice())
+                .quantity(dtoLineItem.getQuantity())
+                .build();
     }
 }

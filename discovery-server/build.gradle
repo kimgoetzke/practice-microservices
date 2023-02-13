@@ -19,6 +19,7 @@ repositories {
 
 dependencies {
     implementation libs.spring.cloud.eureka.server
+//    implementation libs.spring.boot.starter.security
 }
 
 test {
