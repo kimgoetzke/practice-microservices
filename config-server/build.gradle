@@ -6,11 +6,11 @@ plugins {
 }
 
 group 'com.example'
-version '0.0.2'
+version '0.0.1'
 sourceCompatibility = '17'
 
 application {
-    mainClass = 'com.example.ApiGatewayApplication'
+    mainClass = 'com.example.ConfigServerApplication'
 }
 
 repositories {
@@ -18,16 +18,11 @@ repositories {
 }
 
 dependencies {
-    implementation libs.spring.cloud.starter.gateway
+    implementation 'org.springframework.cloud:spring-cloud-config-server:4.0.1'
     implementation libs.spring.cloud.eureka.client
-    implementation libs.spring.cloud.starter.config
-    implementation libs.spring.boot.starter.oath2.resource.server
-    implementation libs.spring.boot.starter.security
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 test {
     useJUnitPlatform()
 }
-
-apply from: '${rootProject}/../../.gradle/local.properties'
