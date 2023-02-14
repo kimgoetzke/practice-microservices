@@ -10,7 +10,7 @@ In the meantime, please feel free to explore the code or view my other projects,
 3. [Muffin @ Concept-Muffin](https://github.com/kimgoetzke/Concept-Muffin) (The concept for a desktop game written in C#)
 
 ## Overview
-![diagram.png](diagram.png)
+![Overview diagram](diagram.png)
 
 ## Instructions to run
 1. Clone repo
