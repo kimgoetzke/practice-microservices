@@ -1,0 +1,31 @@
+// This is the template file for Jib to create Docker images for each service. To use it, you'll need to update it by
+// doing one of the following:
+//   a) Comment out line 8, uncomment lines 11-12, and add your credentials (directly or via a credentials store); or
+//   b) Create local.properties in the directory listed below and add your credentials there (directly or via a
+//      credentials store).
+// Then, update the image URL (line 24) to your Docker Hub repository.
+
+apply from: "${rootDir}/.gradle/local.properties"
+
+ext {
+//    dockerhub_username=""
+//    dockerhub_password=""
+}
+
+jib {
+    from {
+        image = 'eclipse-temurin:17-jre'
+        auth {
+            username = dockerhub_username
+            password = dockerhub_password
+        }
+    }
+    to {
+        image = 'registry.hub.docker.com/kimgoetzke/practice-microservices'
+        auth {
+            username = dockerhub_username
+            password = dockerhub_password
+        }
+        tags = [ "${project.name}" ]
+    }
+}

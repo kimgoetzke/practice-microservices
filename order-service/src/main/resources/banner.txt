@@ -2,4 +2,5 @@ ____ ____ ___  ____ ____    ____ ____ ____ _  _ _ ____ ____
 |  | |__/ |  \ |___ |__/    [__  |___ |__/ |  | | |    |___
 |__| |  \ |__/ |___ |  \    ___] |___ |  \  \/  | |___ |___
                                                             
-${application.title} ${application.version}
+Project: Practice Microservices
+GitHub: https://github.com/kimgoetzke/Practice-Microservices

@@ -1,13 +1,15 @@
 plugins {
     id 'application'
-    id 'org.springframework.boot' version '3.0.2'
-    id 'io.spring.dependency-management' version '1.1.0'
     id 'idea'
+    id 'org.springframework.boot'
+    id 'io.spring.dependency-management'
+    id 'com.google.cloud.tools.jib'
 }
 
 group 'com.example'
-version '0.0.4'
+version '0.0.5'
 sourceCompatibility = '17'
+targetCompatibility = '17'
 
 application {
     mainClass = 'com.example.OrderServiceApplication'
@@ -38,3 +40,5 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+apply from: "${rootProject}/../../properties.gradle"
