@@ -70,7 +70,7 @@ POST `api/order`
    4. The Eureka discovery server status page is accessible at `localhost:8181/eureka/web`
 
 ### Without Docker Compose (_not_ recommended)
-Only recommended if you want to use and expand on this project.
+Only recommended if you want to expand on this project.
 1. __Clone repo__
 2. __Create separate repo for configurations__
    1. Manually create second, local Git repo for configuration files
@@ -107,8 +107,8 @@ Without further modification (and when __not__ using Docker Compose), ports used
 
 Ports for all other services will be assigned and controlled by the discovery server. As a result, all requests to business services must be made through `localhost:8080`.
 
-## Generate a OAUth2.0 token with Postman
-+ Create anew request
+## Generate a valid OAUth2.0 token with Postman
++ Create a new request
 + Select `Authorization` and set the following:
   + Access token URL = `http://keycloak:8080/realms/practice-microservices-realm/protocol/openid-connect/token`
   + Client ID = `microservices-cloud-client`
