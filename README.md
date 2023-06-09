@@ -2,8 +2,6 @@
 
 This repo contains a simple, containerised microservice architecture, written in Java and using the Spring framework.
 
-_This project is currently being worked on. Further documentation will follow once all MVP features have been added._
-
 ## Architecture overview
 ![Overview diagram](diagram.png)
 
