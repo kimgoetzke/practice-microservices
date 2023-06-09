@@ -105,7 +105,7 @@ Without further modification (and when __not__ using Docker Compose), ports used
 
 Ports for all other services will be assigned and controlled by the discovery server. As a result, all requests to business services must be made through `localhost:8080`.
 
-## Generate a valid OAUth2.0 token with Postman
+## Generate a valid OAuth2.0 token with Postman
 + Create a new request
 + Select `Authorization` and set the following:
   + Access token URL = `http://keycloak:8080/realms/practice-microservices-realm/protocol/openid-connect/token`
