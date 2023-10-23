@@ -1,6 +1,7 @@
 # The Microservices Project
 
-This repo contains a simple, containerised microservice architecture, written in Java and using the Spring framework.
+This repo contains a simple, containerised microservice architecture, written in Java and using the Spring framework. The purpose of this project was to learn more about the interaction between microservices and their supporting infrastructure (and __not__ to create any meaningful API endpoints).
+
 
 ## Architecture overview
 ![Overview diagram](diagram.png)
@@ -9,8 +10,6 @@ This repo contains a simple, containerised microservice architecture, written in
 + I have intentionally kept this project single-repo (code & Docker Hub images), even though this is not what I would do for a real application.
 
 ## Instructions to use
-_The purpose of this project was solely to learn more about the interaction between microservices and ther supporting infrastructure, __not__ to create any meaningful API endpoints._
-
 The following inventory is created for testing purposes:
 
 | Name    | Quantity |
@@ -112,4 +111,4 @@ Ports for all other services will be assigned and controlled by the discovery se
   + Client ID = `microservices-cloud-client`
   + Client Secret (follow steps above to generate from KeyCloak admin portal)
   + Scope = `openid offline_access`
-+ Click `Get New Access Token`
++ Click "Get New Access Token"
